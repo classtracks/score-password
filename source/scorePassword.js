@@ -2,13 +2,13 @@ import doesNotRepeat from './doesNotRepeat';
 import getLengthScore from './getLengthScore';
 import isNotPatterned from './isNotPatterned';
 
-const getPasswordScore = (password, ...disallowedPasswordsArrays) => {
+const scorePassword = (password, ...disallowedPasswordsArrays) => {
   if (! password) {
     return 0;
   }
 
   const allowed = disallowedPasswordsArrays.every(disallowedPasswords => ! disallowedPasswords.includes(password));
-  if (allowed) {
+  if (! allowed) {
     return 0;
   }
 
@@ -39,4 +39,4 @@ const getPasswordScore = (password, ...disallowedPasswordsArrays) => {
   return alphanumericScore + bothCasesScore + noLettersScore + noPatternScore + noRepeatScore;
 };
 
-export default getPasswordScore;
+export default scorePassword;

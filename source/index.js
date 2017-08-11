@@ -1,3 +1,3 @@
-import getPasswordScore from './getPasswordScore';
+import scorePassword from './scorePassword';
 
-export default getPasswordScore;
+export default scorePassword;
