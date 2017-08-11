@@ -1,0 +1,22 @@
+{
+  "name": "score-password",
+  "version": "0.8.0",
+  "description": "Returns a simple score for a password input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "classtracks/score-password",
+  "keywords": [
+    "password",
+    "score",
+    "estimation",
+    "strength"
+  ],
+  "author": "ClassTracks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/classtracks/score-password/issues"
+  },
+  "homepage": "https://github.com/classtracks/score-password#readme"
+}
