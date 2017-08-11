@@ -1,13 +1,14 @@
-import commonPasswords from './commonPasswords';
 import doesNotRepeat from './doesNotRepeat';
 import getLengthScore from './getLengthScore';
 import isNotPatterned from './isNotPatterned';
 
-const getPasswordScore = (password) => {
+const getPasswordScore = (password, ...disallowedPasswordsArrays) => {
   if (! password) {
     return 0;
   }
-  if (commonPasswords.includes(password)) {
+
+  const allowed = disallowedPasswordsArrays.every(disallowedPasswords => ! disallowedPasswords.includes(password));
+  if (allowed) {
     return 0;
   }
 
